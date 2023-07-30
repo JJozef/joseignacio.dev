@@ -16,8 +16,8 @@ function AboutMe() {
       <h3 className='font-bold text-base mb-3'>Informacion General</h3>
       <p className='text-sm'>
         Soy un desarrollador web, con experiencia en el desarrollo de
-        aplicaciones web y aplicaciones moviles. Me gusta aprender nuevas
-        tecnologias y aplicarlas en mis proyectos.
+        aplicaciones web. Me gusta aprender nuevas tecnologias y aplicarlas en
+        mis proyectos.
       </p>
       <h3 className='font-bold text-base mb-3 mt-6'>Habilidades</h3>
 
