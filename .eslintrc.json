@@ -2,6 +2,8 @@
   "extends": ["next/core-web-vitals", "./node_modules/standard/eslintrc.json"],
   "rules": {
     "space-before-function-paren": "off",
-    "react/jsx-curly-newline": "off"
+    "react/jsx-curly-newline": "off",
+    "@next/next/no-img-element": "off",
+    "multiline-ternary": "off"
   }
 }
