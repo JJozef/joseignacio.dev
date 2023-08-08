@@ -13,36 +13,32 @@ import CardTech from '../ui/CardTech'
 function AboutMe() {
   return (
     <Container>
-      <h3 className='font-bold text-base mb-3'>Informacion General</h3>
-      <p className='text-sm'>
-        Soy un desarrollador web, con experiencia en el desarrollo de
-        aplicaciones web. Me gusta aprender nuevas tecnologias y aplicarlas en
-        mis proyectos.
+      <h3 className='font-bold text-lg mb-3'>Informacion General</h3>
+      <p className='text-base'>
+        ¡Hola! Soy José Ignacio, un desarrollador web de Chile. Tengo
+        experiencia en el desarrollo de aplicaciones web y me apasiona aprender
+        nuevas tecnologías y aplicarlas en mis proyectos. Disfruto trabajando en
+        equipo y colaborando con otros profesionales para lograr resultados
+        exitosos. Soy autodidacta y siempre busco oportunidades para crecer y
+        mejorar mis habilidades.
       </p>
-      <h3 className='font-bold text-base mb-3 mt-6'>Habilidades</h3>
+      <h3 className='font-bold text-lg mb-3 mt-6'>Habilidades</h3>
 
       <ul className='grid grid-cols-3 gap-3 md:grid-cols-4'>
         <CardTech
-          url='https://www.javascript.com/'
           icon={
             <JavaScriptIcon className='w-16 h-16 group-hover:stroke-[#fde047]' />
           }
           tech='JavaScript'
           color='rgba(253, 224, 71, .1)'
         />
+        <CardTech icon={<NextJsIcon className='w-16 h-16' />} tech='NextJs' />
         <CardTech
-          url='https://nextjs.org/'
-          icon={<NextJsIcon className='w-16 h-16' />}
-          tech='NextJs'
-        />
-        <CardTech
-          url='https://www.php.net/'
           icon={<PHPIcon className='w-16 h-16 group-hover:stroke-[#484C89]' />}
           tech='PHP'
           color='rgba(72, 76, 137, .1)'
         />
         <CardTech
-          url='https://laravel.com/'
           icon={
             <LaravelIcon className='w-16 h-16 group-hover:stroke-[#c2410c]' />
           }
@@ -51,7 +47,6 @@ function AboutMe() {
         />
 
         <CardTech
-          url='https://www.mysql.com/'
           icon={
             <MySqlIcon className='w-16 h-16 group-hover:stroke-[#00758f]' />
           }
@@ -59,7 +54,6 @@ function AboutMe() {
           color='rgba(0, 117, 143, .1)'
         />
         <CardTech
-          url='https://tailwindcss.com/'
           icon={
             <TailwindIcon className='w-16 h-16 group-hover:stroke-[#38bdf8]' />
           }
@@ -67,7 +61,6 @@ function AboutMe() {
           color='rgba(56, 189, 248, .1)'
         />
         <CardTech
-          url='https://getbootstrap.com/'
           icon={
             <BootStrapIcon className='w-16 h-16 group-hover:stroke-[#6d28d9]' />
           }

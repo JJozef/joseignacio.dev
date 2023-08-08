@@ -11,14 +11,14 @@ function Preloader() {
         alt='Jose Ignacio - Logo.'
         className='w-20 h-20 rounded-full absolute'
         transition={{
-          duration: 3,
+          duration: 2,
           ease: 'easeInOut',
-          times: [0, 0.2, 0.5, 0.8, 1, 1.2, 1.5, 1.8, 2]
+          times: [0, 0.2, 0.5, 0.8]
         }}
         animate={{
-          scale: [1, 0.7, 1.5, 1, 1.2, 1, 0.6, 1],
-          rotate: [0, 270, -70, 270, 0, -90, -90, 270, 0],
-          borderRadius: ['20%', '20%', '50%', '50%', '20%', '20%', '50%', '50%']
+          scale: [1, 0.7, 1.5, 1],
+          rotate: [0, 270, -70, 0],
+          borderRadius: ['20%', '20%', '50%', '50%']
         }}
         onAnimationComplete={() => {
           setIsLoading(false)

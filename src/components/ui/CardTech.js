@@ -1,8 +1,7 @@
 import { useRef, useState } from 'react'
-import Link from 'next/link'
 import clsx from 'clsx'
 
-function CardTech({ tech, icon, url, color }) {
+function CardTech({ tech, icon, color }) {
   const divRef = useRef(null)
   const [isFocused, setIsFocused] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
@@ -56,14 +55,9 @@ function CardTech({ tech, icon, url, color }) {
           }px, ${color || 'rgba(0, 0, 0, .2)'}, transparent 40%)`
         }}
       />
-      <Link
-        href={url}
-        className='flex flex-col justify-center items-center h-full w-full px-3 py-3 transition-all duration-300 group-hover:pb-7 bg-transparent'
-        rel='noopener noreferrer nofollow'
-        target='_blank'
-      >
+      <div className='flex flex-col justify-center items-center h-full w-full px-3 py-3 transition-all duration-300 group-hover:pb-7 bg-transparent'>
         {icon}
-      </Link>
+      </div>
       <div className='w-full absolute bottom-1 left-0 text-center'>
         <span
           className={clsx(
