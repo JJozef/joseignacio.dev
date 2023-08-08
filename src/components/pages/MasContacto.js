@@ -4,12 +4,6 @@ import Container from '../Container'
 function MasContacto() {
   return (
     <Container>
-      <h3 className='font-bold text-lg mb-2'>Gracias</h3>
-      <p className='mb-3 text-base'>
-        ¡Espero que te hayas divertido en mi sitio web! Ven de nuevo la próxima
-        vez 😉
-      </p>
-
       <h3 className='font-bold text-lg mb-2 mt-6'>Contacto</h3>
 
       <p className='mb-3 text-base'>
@@ -64,6 +58,12 @@ function MasContacto() {
 
         <span className='mt-2 font-medium'>Y MAS 👀</span>
       </ul>
+
+      <h3 className='font-bold text-lg mb-2 mt-20'>Gracias</h3>
+      <p className='mb-3 text-base'>
+        ¡Espero que te hayas divertido en mi sitio web! Ven de nuevo la próxima
+        vez 😉
+      </p>
     </Container>
   )
 }
