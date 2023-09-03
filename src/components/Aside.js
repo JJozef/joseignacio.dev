@@ -18,6 +18,7 @@ function Aside() {
       <aside
         className={clsx(
           'h-responsive aside-class fixed left-0 top-auto bg-white dark:bg-menu-color md:bg-transparent bottom-0 border-r border-chinese-white dark:border-aside-link/10 z-40 overflow-hidden md:w-auto md:top-0 md:z-0 md:opacity-100 md:visible',
+          'transition-all duration-300',
           isMenuOpen ? 'w-auto visible opacity-100' : 'w-0 invisible opacity-0'
         )}
       >
