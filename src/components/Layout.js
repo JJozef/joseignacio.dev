@@ -1,5 +1,5 @@
 import clsx from 'clsx'
-import HeaderResponsive from './HeaderResponsive'
+import Header from './Header'
 import useMenuStore from '@/stores/MenuStore'
 
 function Layout({ children, className }) {
@@ -12,7 +12,7 @@ function Layout({ children, className }) {
         className
       )}
     >
-      <HeaderResponsive onClick={toggleMenu} />
+      <Header onClick={toggleMenu} />
       {children}
     </section>
   )

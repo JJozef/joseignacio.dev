@@ -1,10 +1,24 @@
-export default function Header({ title, icon, ...props }) {
+import { CloseIcon, HumburgerIcon } from './icons/icons'
+import Link from 'next/link'
+import useMenuStore from '@/stores/MenuStore'
+
+function Header({ onClick, ...props }) {
+  const isMenuOpen = useMenuStore((state) => state.isMenuOpen)
   return (
-    <header className='w-full h-fit px-3 py-3 border-b border-chinese-white bg-subtrans-color dark:border-aside-link/10 dark:bg-aside-link/[0.01]' {...props}>
-      <div className='flex items-center space-x-2 justify-center md:justify-normal'>
-        {icon}
-        <h2 className='font-medium text-2xl'>{title}</h2>
-      </div>
+    <header className='py-4 px-6 flex justify-between items-center md:hidden border-b border-chinese-white dark:border-aside-link/10'>
+      <Link href='/'>
+        <h1 className='text-base font-medium'>Jose Ignacio</h1>
+      </Link>
+      <button
+        className='focus:outline-none focus-visible:outline-none hover:bg-aside-link/5 rounded-lg px-1 py-1 transition-colors duration-300'
+        onClick={onClick}
+        aria-label='Abrir menú'
+        {...props}
+      >
+        {isMenuOpen ? <CloseIcon /> : <HumburgerIcon />}
+      </button>
     </header>
   )
 }
+
+export default Header
