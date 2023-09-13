@@ -28,7 +28,7 @@ export const ProjectsList = [
       }
     ],
     image: '/images/urly-shorturl-app.png',
-    link: 'https://urly-zeta.vercel.app'
+    link: 'https://urly.cloud'
   },
   {
     title: 'SpaceX Launchs',
