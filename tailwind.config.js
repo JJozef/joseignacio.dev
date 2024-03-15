@@ -1,42 +1,102 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const { fontFamily } = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ['class'],
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    './node_modules/@tremor/**/*.{js,ts,jsx,tsx}'
+    './pages/**/*.{js,jsx}',
+    './components/**/*.{js,jsx}',
+    './app/**/*.{js,jsx}',
+    './src/**/*.{js,jsx}'
   ],
-  darkMode: 'class',
+  prefix: '',
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px'
+      }
+    },
     extend: {
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        display: ['Mona Sans', ...defaultTheme.fontFamily.sans]
+        sans: ['var(--font-sans)', ...fontFamily.sans]
       },
       colors: {
-        'aside-link': '#eaeaea',
-        'menu-color': '#111212cc',
-        'menu-color-light': '#111112',
-        'subtrans-color': '#e0e0e03a',
-        'jungle-green': '#221F1F',
-        'chinese-white': '#E1E1E1'
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
+        'foreground-contrast': 'hsl(var(--foreground-contrast))',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))'
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))'
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))'
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))'
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))'
+        },
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))'
+        },
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))'
+        }
+      },
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)'
+      },
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' }
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' }
+        },
+        under: {
+          '0%': {
+            width: 0,
+            opacity: 0
+          },
+          '100%': {
+            width: '100%',
+            opacity: 1
+          }
+        }
+      },
+      backgroundImage: {
+        'bg-dotted':
+          'radial-gradient(circle at 50% 50%,#605e6755 0,#141318 15%)'
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        underline: 'under 1s ease-in-out infinite'
       },
       boxShadow: {
-        'aside-link-sw':
-          'rgba(245, 244, 244, 0.05) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.04) 0px 2px 8px, rgba(0, 0, 0, 0.05) 0px 30px 70px'
-      },
-      fontSize: {
-        md: '0.938rem'
-      },
-      height: {
-        dvh: '100dvh'
-      },
-      zIndex: {
-        '10-i': '10 !important'
+        toolbar: '0 0 6px 1px',
+        'toolbar-hover': '0 0 8px 2px'
       }
     }
   },
-  plugins: []
+  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')]
 }
