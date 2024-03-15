@@ -8,16 +8,12 @@ import { Button } from './ui/button'
 export function SelectTheme() {
   const { theme, setTheme } = useTheme()
 
-  const handleTheme = () => {
-    if (theme === 'dark') {
-      setTheme('light')
-    } else {
-      setTheme('dark')
-    }
-  }
-
   return (
-    <Button variant='outline' className='w-9 px-3' onClick={handleTheme}>
+    <Button
+      variant='outline'
+      className='w-9 px-3'
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+    >
       {theme === 'dark' ? (
         <SunIcon className='h-4 w-4 min-w-4' />
       ) : (
