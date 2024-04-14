@@ -51,7 +51,7 @@ export default function SocialCard() {
           </Button>
           <Button
             variant='outline'
-            onClick={() => window.open('mailto:josemillaquen12@gmail.com')}
+            onClick={() => window.open('mailto:jozef@joseignacio.dev')}
             aria-label='Email'
             title='Contactame'
           >
