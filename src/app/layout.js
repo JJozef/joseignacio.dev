@@ -4,8 +4,8 @@ import { siteConfig } from '@/root/config/site'
 import { cn } from '@/lib/utils'
 import { Inter as FontSans } from 'next/font/google'
 import { ThemeProvider } from '@/provider/theme-provider'
+import { TooltipProvider } from '@/components/ui/tooltip'
 import Header from '@/components/header'
-import { TooltipProvider } from '../components/ui/tooltip'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -25,6 +25,7 @@ export const metadata = {
     'Developer',
     'React',
     'Next.js',
+    'Vue.js',
     'TailwindCSS'
   ],
   authors: [
