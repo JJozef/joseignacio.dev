@@ -13,7 +13,9 @@ export default function WorkExperiienceCard() {
             company={workExperience.company}
             startDate={workExperience.startDate}
             endDate={workExperience.endDate}
+            workType={workExperience.workType}
             responsibilities={workExperience.responsibilities}
+            tecnologies={workExperience.tecnologies || []}
             isLatest={index === 0}
           />
         ))}

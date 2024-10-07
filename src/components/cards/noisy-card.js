@@ -57,11 +57,14 @@ const NoisyCard = ({ children, className, ...props }) => {
 
 NoisyCard.displayName = 'NoisyCard'
 
-const NoisyCardBGImg = forwardRef(({ url }, ref) => {
+const NoisyCardBGImg = forwardRef(({ className, url }, ref) => {
   return (
     <div
       ref={ref}
-      className='relative p-[calc(1.5rem-1px)] rounded-lg bg-center bg-no-repeat bg-cover w-full blur-lg h-full'
+      className={cn(
+        'relative p-[calc(1.5rem-1px)] rounded-lg bg-center bg-no-repeat bg-cover w-full blur-lg h-full',
+        className
+      )}
       style={{ backgroundImage: `url(${url})` }}
     />
   )

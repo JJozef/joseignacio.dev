@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils'
 import { Briefcase } from 'lucide-react'
 import { Badge } from '../ui/badge'
+import Link from 'next/link'
 
 export default function WorkExperience({
   position,
@@ -8,6 +9,8 @@ export default function WorkExperience({
   startDate,
   endDate,
   responsibilities,
+  tecnologies,
+  workType,
   isLatest
 }) {
   return (
@@ -29,12 +32,10 @@ export default function WorkExperience({
         <Briefcase
           className={cn(
             {
-              'w-3 h-3 text-green-600 dark:text-green-400':
-                isLatest
+              'w-3 h-3 text-green-600 dark:text-green-400': isLatest
             },
             {
-              'w-3 h-3 text-blue-600 dark:text-blue-400':
-                !isLatest
+              'w-3 h-3 text-blue-600 dark:text-blue-400': !isLatest
             }
           )}
         />
@@ -46,16 +47,23 @@ export default function WorkExperience({
         </h3>
         <span className='hidden sm:block'>·</span>
         <h4 className='flex items-center text-sm font-medium text-zinc-500 dark:text-zinc-400'>
-          @{company.name}
+          <Link
+            className='hover:underline'
+            href={company.site}
+            rel='noopener noreferrer'
+            target='_blank'
+          >
+            @{company.name}
+          </Link>
           <img
             src={company.image_url}
-            alt={company.name}
+            alt={company.name + ' — ' + company.location}
             className='inline-block w-6 h-6 ml-2 rounded-md'
           />
         </h4>
       </div>
       <time className='block mb-2.5 text-sm font-normal leading-none text-muted-foreground'>
-        {startDate} - {endDate}
+        {startDate} - {endDate} — {workType}
       </time>
       <ul className='mb-4 text-base font-normal'>
         {responsibilities.map((responsibility, index) => (
@@ -64,6 +72,13 @@ export default function WorkExperience({
           </li>
         ))}
       </ul>
+      <div className='flex flex-wrap gap-2'>
+        {tecnologies.map((tecnology, index) => (
+          <Badge variant='outline' key={index} className='px-2 py-1'>
+            {tecnology}
+          </Badge>
+        ))}
+      </div>
     </li>
   )
 }

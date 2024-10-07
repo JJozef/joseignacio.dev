@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils'
 import { Inter as FontSans } from 'next/font/google'
 import { ThemeProvider } from '@/provider/theme-provider'
 import Header from '@/components/header'
+import { TooltipProvider } from '../components/ui/tooltip'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -79,10 +80,12 @@ export default function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
-          <main className='h-full relative min-w-0 pt-[calc(72px_+_1.5rem_-_0.5rem)] pb-6 px-4 antialiased max-w-3xl mx-auto'>
-            {children}
-          </main>
+          <TooltipProvider delayDuration={25} disableHoverableContent>
+            <Header />
+            <main className='relative min-w-0 pt-[calc(72px_+_1.5rem_-_0.5rem)] pb-6 px-4 antialiased max-w-3xl mx-auto'>
+              {children}
+            </main>
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>

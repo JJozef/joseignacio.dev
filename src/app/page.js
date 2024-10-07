@@ -17,7 +17,7 @@ export default function Home() {
       <section className='w-full mt-4 md:mt-6 pb-6'>
         <h2 className='text-xl font-semibold sm:text-2x mb-4'>Proyectos</h2>
 
-        <div className='grid grid-cols-1 sm:grid-cols-2 gap-y-4 sm:gap-4 mb-4 grid-rows-[repeat(7,minmax(auto,170px))] sm:grid-rows-[repeat(7,minmax(auto,195px))] md:grid-rows-[repeat(4,minmax(auto,210px))]'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-y-4 sm:gap-4 mb-4 md:grid-rows-2'>
           {PROJECTS_DATA.map((p, index) => {
             return (
               <ProjectCard

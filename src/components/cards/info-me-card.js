@@ -9,7 +9,7 @@ export default function InfoMeCard() {
       </h1>
       <p className='flex flex-col justify-center text-pretty'>
         <span className='text-lg font-bold tracking-wide text-center md:text-xl md:text-left'>
-          <span className='text-yellow-400'>Frontend Developer</span>
+          <span className='text-green-600 dark:text-green-400'>Frontend Developer</span>
         </span>
         <span className='text-center text-muted-foreground md:text-left'>
           23y/o ~ Chile.

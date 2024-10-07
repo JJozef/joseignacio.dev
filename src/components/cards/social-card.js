@@ -8,6 +8,11 @@ import {
   MailForwardIcon,
   TwitterXIcon
 } from '@/components/ui/icons'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger
+} from '@/components/ui/tooltip'
 import BadgeAnimated from '@/components/ui/badge-animated'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -27,36 +32,54 @@ export default function SocialCard() {
       <BadgeAnimated className='select-none'>Trabajando</BadgeAnimated>
       <div className='flex flex-col gap-3'>
         <div className='flex justify-between gap-3'>
-          <Button variant='outline' asChild>
-            <Link
-              href='https://github.com/JJozef'
-              rel='noopener noreferrer nofollow'
-              target='_blank'
-              aria-label='Github'
-              title='Ir a mi Github'
-            >
-              <GithubIcon />
-            </Link>
-          </Button>
-          <Button variant='outline' asChild>
-            <Link
-              href='https://twitter.com/Jozefzin'
-              rel='noopener noreferrer nofollow'
-              target='_blank'
-              aria-label='Twitter'
-              title='Ir a mi Twitter'
-            >
-              <TwitterXIcon />
-            </Link>
-          </Button>
-          <Button
-            variant='outline'
-            onClick={() => window.open('mailto:jozef@joseignacio.dev')}
-            aria-label='Email'
-            title='Contactame'
-          >
-            <MailForwardIcon />
-          </Button>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button variant='outline' asChild>
+                <Link
+                  href='https://github.com/JJozef'
+                  rel='noopener noreferrer nofollow'
+                  target='_blank'
+                  aria-label='Github'
+                >
+                  <GithubIcon />
+                </Link>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent className='py-0' sideOffset={10}>
+              <p>Github</p>
+            </TooltipContent>
+          </Tooltip>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button variant='outline' asChild>
+                <Link
+                  href='https://twitter.com/Jozefzin'
+                  rel='noopener noreferrer nofollow'
+                  target='_blank'
+                  aria-label='Twitter'
+                >
+                  <TwitterXIcon />
+                </Link>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent className='py-0' sideOffset={10}>
+              <p>X <em>(Twitter)</em></p>
+            </TooltipContent>
+          </Tooltip>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button
+                variant='outline'
+                onClick={() => window.open('mailto:jozef@joseignacio.dev')}
+                aria-label='Email'
+              >
+                <MailForwardIcon />
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent className='py-0' sideOffset={10}>
+              <p>Contactame</p>
+            </TooltipContent>
+          </Tooltip>
         </div>
         <Button asChild>
           <Link className='group' href='/about'>

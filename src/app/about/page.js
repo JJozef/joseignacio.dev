@@ -34,24 +34,12 @@ export default function AboutPage() {
             <p className='text-center text-pretty md:text-left animated-gray-gradient'>
               Desarrollador <b className='font-semibold'>Frontend</b> con
               conocimientos en <b className='font-semibold'>Backend</b>, con
-              <span className='font-semibold text-yellow-300'>
-                &nbsp;+1 año&nbsp;
-              </span>
+              <span className='font-semibold text-green-600 dark:text-green-400'> +1 año </span>
               de experiencia en el desarrollo de aplicaciones web.
             </p>
             <p className='text-center text-pretty md:text-left animated-gray-gradient'>
-              Conocimientos en
-              <span className='font-semibold text-green-600 dark:text-green-400'>
-                &nbsp;React,
-              </span>
-              <span className='font-semibold text-green-600 dark:text-green-400'>
-                &nbsp;Next.js&nbsp;
-              </span>
-              y
-              <span className='font-semibold text-green-600 dark:text-green-400'>
-                &nbsp;Vue.js
-              </span>
-              .
+              Conocimientos en <strong>Next.js</strong> y{' '}
+              <strong>Vue.js</strong>.
             </p>
           </div>
           <div className='flex justify-center rounded-full from-zinc-200 to-zinc-400 dark:from-zinc-500/80 dark:to-zinc-800/80 bg-gradient-to-b w-max p-1'>

@@ -1,17 +1,11 @@
-import {
-  RocketIcon,
-  TicTacToeIcon,
-  UrlyIcon,
-  ZwayAppIcon
-} from '@/components/ui/icons'
-
-// zeez nuevo nombre para una app
+import { RocketIcon, ZwayAppIcon } from '@/components/ui/icons'
 
 export const PROJECTS_DATA = [
   {
     title: 'zway.app',
     icon: <ZwayAppIcon className='bg-black text-white rounded-lg' />,
-    description: 'HTML, CSS y JavaScript sandbox, crea y comparte de manera sencilla y rápida tu código.',
+    description:
+      'HTML, CSS y JavaScript sandbox, crea y comparte de manera sencilla y rápida tu código.',
     stack: [
       {
         name: 'Next.js',
@@ -33,36 +27,6 @@ export const PROJECTS_DATA = [
     image: '/projects/zway-app.png',
     demo: 'https://zway.vercel.app',
     repo: 'https://github.com/JJozef/zway.app'
-  },
-  {
-    title: 'URLy',
-    icon: <UrlyIcon />,
-    description:
-      'URLy es una aplicación para acortar enlaces y compartirlos. Simplifica tus URLs y compártelas de manera eficiente con URLy.',
-    stack: [
-      {
-        name: 'Next.js',
-        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC5UlEQVR4AbyUgWdCURTGs62QQAIJoKgI5C0BkwKgCCBKqGyEABREJABK/QsLQQHw9h8U0rASopCkoPS+na5bRq13e20dfnB993yf9849OsF6IpzEG9EkPoklseMs+VmTa5z8zs31SDwTNWJIbAmosOXaGr/7qNXcSpSJGQGNzHgP67XmEvFBKARuROG9JFHzF2JA4I8ZsN4qJWk2Fw8hXfrnMoF/Rj43Ew98WHAnytzzWD5iescAU+55fOvVSxfcbjfS6TQymQwkSbrY3OfzMa3f71cLUT3sCBcxvCBkDQ/V6/Xgcrl+1RYKBSwWCxSLRbUAX8ybr86tUABerVYLZrP5rDabzaLb7SKXy4lszFeC7W+IBBiPx5hMJlAUBaVSCXq9/kQbj8fRbreRTCZFZuGd0A0EA7DGqVQK6/Uaq9UKsVjsRBuJRFCv1xGNRkX3gm55TQCTyYRKpYJ9jUYjNnQ/tYFAAPl8HsFgUCAA89btRAN0Oh322S0WCwuzL1mWYbPZjlqv14tEIqH6Wji7qwMYDAZ25vF40O/32Xmj0YDRaGTndrsdoVAIDodDOMBSQwBGOBzGfD7HZrP5rr5qQTOEoihPi0UNouJABItG05pgE7EjJu26YDYKhvXeBMtX7GlgsRmX7PYoO+OuM98nwtiDWx+H+3N+0DQNGGMwDOPnTE3T5B7B51UAgiCgbVscx4F935EkCWhEiqJAkiTuJXxcBUAlyzKGYQC9dV3h+/4zlPw4J6ITAFSu62JZFtAjMKqqgtO6vXFQ8TkAqiiKQEu5bRvquoYoitxUzCVGVVUhTdNfP87zHPM8Y5omhGHILUa3yTF1h7o1jiO6roNt21xyfKshoflTt/q+R5ZlxA9chuRWS2ZZFoqiQFmWCIKAzvXUkt1uSh3HQRzHZEygaRqXKb3VlhMrkkZ4ngdd12l5uWz5rcGEWi/L8pckSR+CILz+STRjjL0zxl7+ZTi9Gs/rZ+L5N8AJA23K4ax1AAAAAElFTkSuQmCC'
-      },
-      {
-        name: 'TailwindCSS',
-        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC8UlEQVR4Ae2XNZTbQBCG5TBzUl4VZj6+cH8pw0xNqHN10L8w9MVVgSoce+2kCUMVxjbUJSLTb/uXNH4rHYRJ731vRyt5Z3ZIa+OPu/5fNUkrBNMbf5BSVaEwBnqDPhLOxaRh33wtVJ91xQnIJMwrmiHqKw2pSZmacsojQTNoAydJK1jJZwboRWiE/bWxpvKEGatRJQPi4CPIgxxHKX8C7Xh3YM01h97wjeDG7Iq1I2Ju+i80Xc4a1crsA/k0lWSBRVxBhs/y4D6oAsIIjRjo1dXuvR8f5MIZjgT3uiccym/ABP6+L4gJxX2qy5scFmpAbdKUyqu5YAfjvBhsAOkwI4jL8S2Y5OfF2bwhDBkH2iI9IJLoKFgt58Qi8QgjpLfeg/XIiyELrlvYnNUP903gBdjfVQgGgRmUg3qnzPk9gUItRFniGfIQvOT9zWJiB25ns6lN2sDfJWE4EloS9aW8SyiVCZmj7IRUy3QQ0uW4y8akazSAOpRNvXIMsXO63yS+J1aAN1KRRMw9BnO8JJfKe8kOVlteeEQJBVnRA7IjKq1ahoCt4Dxd/YG85NwmMKgahlNfkHClslClmG+KWoCLD/GVKptG2KIFl+egJNgAveSFVnZJaf0cuqcrF76hu8vuLxqRdrUQzscuF4Dqq7axEGghJJ4wnYkhFTmivLKUXWHQLq3JgOoUvUKPBNBT9IRsu8UXb3LRlyyV93oZAb3c9nRRojPAIMqRH539bApNoF8t3Mk4rxeGZLRwBHNx4X7ZrFaziXEu2oA2MM5f5G5eLjKJ7ZT1HWlEmu15Mdt1B+ervYRFf4k0YBjLopwgCa3JTBD17VCxbgQR9weDaokOgVb/AlkhVfzE5mVCCizi5cvp4iccn/IgNMqMMEAqv2pyzqw0IvGlOA4E7SHVIuWPIA4vYtfM/q86H+pGyCPWSMa5FZwkbaCZz/RzYcr8ynNhIuxcaPO+e4dSHGy/038BRbo6lquvOJZ/TWg4avxx1/+rAHVbhJLs9OHAAAAAAElFTkSuQmCC'
-      },
-      {
-        name: 'NextAuth.js',
-        icon: 'data:image/png;base64,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'
-      },
-      {
-        name: 'MongoDB',
-        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADoElEQVR4Aa1XA5AlMRDtMtfe/TNrzPy1z7Zt21euY/ls+658VzrbxbNt23auX+Vvzf5VskjVq8mkO3mdTndA2sVlJ5CZ2o+i05aSYR/j/7tkul8DqKMNMuhAl2qsGKm5jA1kuO9TTJqgmHTBRIzUEpAy6ECXDVqPvlTlEpkTzLObTab9tYiU/3XgGGNaX/h/FkUmBVNlCncu4M6nKUbOtFwilw2UL0dfjGGmnKIYu0DT5VZ9crkfyBm4KyaPdgMVGwFgLIxppNdTr7dpP6YYhbujmDDcErSoDYA62lRGwBOPy4+LwARftvKccuYGIyBF0LD6gj4PB1BHG2RqIwz7LLioVEGw6ARasCWobaGgewMFfRkOoI42yNT9JcdM8irR6dns+m8VBhwAV1s8i6M9BP0cIejtUAB1tEEGHYUB4ACXlV3MAM5zpettQSHs5unNBX1nwncgl0AdbZBBB7oaS7G+KPDi2aKnSvdH8KAZmYLO9hH0bTiIvYA2yKADXfUy2E/ITIsjbJ1aax/EM5vYWNCnYYLeM+TMAdTRBhl0oKsZC1Y/4jxerpV2Lv5u7+q99q8Zr4Z4x8K2Lh59hQHgBDcZ9nGlB8IsQTlZ3u5/z3jA0X9rgOOR7yw72VtQZqY6GMGJA4ytvauM/mB2afN8QXcHIO8dl1/pJwk/eAyA7EZ/QQ1zORh1ssG6g/x/q2/AQCbxkH3k78legvZ3x9pX0QD3G30DWrIB94oZANLDTL65E9eHOwbcZAMa6RugtwShPFi9HEFXefCvxch2cFCuaSd3Q7RBdqmvoMJs9NFcAnUQOscuCH95sgCkmP2yto5RLHOywNYKQr00BAKSBU1uKskQgPhu6iBoYWvvtilNpa6pl4b6GxHSKo9T8VxfSQSsZPfPaYXUBCCDDnT1NyJsxeyuZ0ojDM9uOKqhdD82neEdAa6PlDEBGXQMDXJs/9iKUbhxo+Iwcs6DGP5u4bUXox0DxBi0QaY+BwBw4QAsKmxJDm+d3xXZ4OyKqRmC9nZzDNjNwWmnQwYd7eNYcSFRpGV8mvQCkJKOY1j/xgyuUiWwwJcF57WWAvBLdgzw1Yh653J6DleyCi6lKbiU6nlBGoC6Vtrhwqt+rBhp+tfyrEwJ7Wu5VV/3YVLI1p5RPEwQ8YD6YYJHDh47lSrhWSHVfpqhL8bAM6/KxXDnYZ+ACyv1OEWeo2+NFZeViK2TiZbhAON1v4fjFEAdbZBBpzLP8//gWaNQ3aj4mQAAAABJRU5ErkJggg=='
-      },
-      {
-        name: 'shadcn',
-        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAZ0lEQVR4Ae3MMREAIQxEUepYQAZGUuElmlLEAEoQgQGay5yAa45tmP31n1cYuzwRiQgzQ+ljjL23qgL13vt/jTr11pq754PS11pzztyAeq31pE49iwignpmZqqL0j9wdqGfyVhi7rAdZJpDQclU3QAAAAABJRU5ErkJggg=='
-      }
-    ],
-    image: '/projects/urly.png',
-    demo: 'https://urly.cloud'
   },
   {
     title: 'SpaceX Launchs',
@@ -91,25 +55,5 @@ export const PROJECTS_DATA = [
     image: '/projects/spacex-launches.png',
     demo: 'https://spacex-launches-astro.vercel.app',
     repo: 'https://github.com/JJozef/launches-spacex'
-  },
-  {
-    title: 'Tic Tac Toe',
-    icon: <TicTacToeIcon />,
-    description:
-      'Juego de Tic Tac Toe simple, donde se puede jugar contra un amigo.',
-    status: 'finalizado',
-    stack: [
-      {
-        name: 'Next.js',
-        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC5UlEQVR4AbyUgWdCURTGs62QQAIJoKgI5C0BkwKgCCBKqGyEABREJABK/QsLQQHw9h8U0rASopCkoPS+na5bRq13e20dfnB993yf9849OsF6IpzEG9EkPoklseMs+VmTa5z8zs31SDwTNWJIbAmosOXaGr/7qNXcSpSJGQGNzHgP67XmEvFBKARuROG9JFHzF2JA4I8ZsN4qJWk2Fw8hXfrnMoF/Rj43Ew98WHAnytzzWD5iescAU+55fOvVSxfcbjfS6TQymQwkSbrY3OfzMa3f71cLUT3sCBcxvCBkDQ/V6/Xgcrl+1RYKBSwWCxSLRbUAX8ybr86tUABerVYLZrP5rDabzaLb7SKXy4lszFeC7W+IBBiPx5hMJlAUBaVSCXq9/kQbj8fRbreRTCZFZuGd0A0EA7DGqVQK6/Uaq9UKsVjsRBuJRFCv1xGNRkX3gm55TQCTyYRKpYJ9jUYjNnQ/tYFAAPl8HsFgUCAA89btRAN0Oh322S0WCwuzL1mWYbPZjlqv14tEIqH6Wji7qwMYDAZ25vF40O/32Xmj0YDRaGTndrsdoVAIDodDOMBSQwBGOBzGfD7HZrP5rr5qQTOEoihPi0UNouJABItG05pgE7EjJu26YDYKhvXeBMtX7GlgsRmX7PYoO+OuM98nwtiDWx+H+3N+0DQNGGMwDOPnTE3T5B7B51UAgiCgbVscx4F935EkCWhEiqJAkiTuJXxcBUAlyzKGYQC9dV3h+/4zlPw4J6ITAFSu62JZFtAjMKqqgtO6vXFQ8TkAqiiKQEu5bRvquoYoitxUzCVGVVUhTdNfP87zHPM8Y5omhGHILUa3yTF1h7o1jiO6roNt21xyfKshoflTt/q+R5ZlxA9chuRWS2ZZFoqiQFmWCIKAzvXUkt1uSh3HQRzHZEygaRqXKb3VlhMrkkZ4ngdd12l5uWz5rcGEWi/L8pckSR+CILz+STRjjL0zxl7+ZTi9Gs/rZ+L5N8AJA23K4ax1AAAAAElFTkSuQmCC'
-      },
-      {
-        name: 'TailwindCSS',
-        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC8UlEQVR4Ae2XNZTbQBCG5TBzUl4VZj6+cH8pw0xNqHN10L8w9MVVgSoce+2kCUMVxjbUJSLTb/uXNH4rHYRJ731vRyt5Z3ZIa+OPu/5fNUkrBNMbf5BSVaEwBnqDPhLOxaRh33wtVJ91xQnIJMwrmiHqKw2pSZmacsojQTNoAydJK1jJZwboRWiE/bWxpvKEGatRJQPi4CPIgxxHKX8C7Xh3YM01h97wjeDG7Iq1I2Ju+i80Xc4a1crsA/k0lWSBRVxBhs/y4D6oAsIIjRjo1dXuvR8f5MIZjgT3uiccym/ABP6+L4gJxX2qy5scFmpAbdKUyqu5YAfjvBhsAOkwI4jL8S2Y5OfF2bwhDBkH2iI9IJLoKFgt58Qi8QgjpLfeg/XIiyELrlvYnNUP903gBdjfVQgGgRmUg3qnzPk9gUItRFniGfIQvOT9zWJiB25ns6lN2sDfJWE4EloS9aW8SyiVCZmj7IRUy3QQ0uW4y8akazSAOpRNvXIMsXO63yS+J1aAN1KRRMw9BnO8JJfKe8kOVlteeEQJBVnRA7IjKq1ahoCt4Dxd/YG85NwmMKgahlNfkHClslClmG+KWoCLD/GVKptG2KIFl+egJNgAveSFVnZJaf0cuqcrF76hu8vuLxqRdrUQzscuF4Dqq7axEGghJJ4wnYkhFTmivLKUXWHQLq3JgOoUvUKPBNBT9IRsu8UXb3LRlyyV93oZAb3c9nRRojPAIMqRH539bApNoF8t3Mk4rxeGZLRwBHNx4X7ZrFaziXEu2oA2MM5f5G5eLjKJ7ZT1HWlEmu15Mdt1B+ervYRFf4k0YBjLopwgCa3JTBD17VCxbgQR9weDaokOgVb/AlkhVfzE5mVCCizi5cvp4iccn/IgNMqMMEAqv2pyzqw0IvGlOA4E7SHVIuWPIA4vYtfM/q86H+pGyCPWSMa5FZwkbaCZz/RzYcr8ynNhIuxcaPO+e4dSHGy/038BRbo6lquvOJZ/TWg4avxx1/+rAHVbhJLs9OHAAAAAAElFTkSuQmCC'
-      }
-    ],
-    image: '/projects/tic-tac-toe.png',
-    demo: 'https://tic-tac-toe-jjozef.vercel.app',
-    repo: 'https://github.com/JJozef/tic-tac-toe'
   }
 ]
