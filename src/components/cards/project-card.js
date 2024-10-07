@@ -56,7 +56,6 @@ export default function ProjectCard({
                           className='size-8'
                           variant='outline'
                           size='icon'
-                          asChild
                         >
                           <Image
                             src={s.icon}
