@@ -22,7 +22,7 @@ export default function SocialCard() {
     <NoisyCard className='flex flex-col justify-center items-center gap-6'>
       <div className='flex justify-center rounded-full from-zinc-200 to-zinc-400 dark:from-zinc-500/80 dark:to-zinc-800/80 bg-gradient-to-b w-max p-1'>
         <Image
-          src='/logo.jpg'
+          src='/logo.png'
           alt='Jose Ignacio - Logo'
           width={92}
           height={92}

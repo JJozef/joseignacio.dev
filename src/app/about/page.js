@@ -44,7 +44,7 @@ export default function AboutPage() {
           </div>
           <div className='flex justify-center rounded-full from-zinc-200 to-zinc-400 dark:from-zinc-500/80 dark:to-zinc-800/80 bg-gradient-to-b w-max p-1'>
             <Image
-              src='/logo.jpg'
+              src='/logo.png'
               alt='Jose Ignacio - Logo'
               width={92}
               height={92}

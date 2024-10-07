@@ -41,11 +41,11 @@ export default function Header() {
 
             <Link href='/'>
               <Image
-                src='/logo.jpg'
+                src='/logo.png'
                 alt='Jozef Logo'
                 width={40}
                 height={40}
-                className='h-10 w-10 rounded-xl sm:hidden cursor-pointer no-drag'
+                className='size-7 rounded-md sm:hidden cursor-pointer no-drag'
               />
             </Link>
 
