@@ -34,7 +34,7 @@ export const PROJECTS_DATA = [
       <LogoZekaiApps className='bg-white text-black dark:bg-black dark:text-white rounded-lg' />
     ),
     description:
-      'Bonitos avatares por defecto para sus usuarios, con la posibilidad de personalizarlos.',
+      'Avatares predeterminados que se integran fácilmente en aplicaciones para ofrecer imágenes de perfil por defecto, con la posibilidad de personalización.',
     stack: [
       {
         name: 'Next.js',
