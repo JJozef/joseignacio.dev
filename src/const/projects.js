@@ -1,4 +1,4 @@
-import { RocketIcon, ZwayAppIcon } from '@/components/ui/icons'
+import { LogoZekaiApps, RocketIcon, ZwayAppIcon } from '@/components/ui/icons'
 
 export const PROJECTS_DATA = [
   {
@@ -27,6 +27,31 @@ export const PROJECTS_DATA = [
     image: '/projects/zway-app.png',
     demo: 'https://zway.vercel.app',
     repo: 'https://github.com/JJozef/zway.app'
+  },
+  {
+    title: 'avzx',
+    icon: (
+      <LogoZekaiApps className='bg-white text-black dark:bg-black dark:text-white rounded-lg' />
+    ),
+    description:
+      'Bonitos avatares por defecto para sus usuarios, con la posibilidad de personalizarlos.',
+    stack: [
+      {
+        name: 'Next.js',
+        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC5UlEQVR4AbyUgWdCURTGs62QQAIJoKgI5C0BkwKgCCBKqGyEABREJABK/QsLQQHw9h8U0rASopCkoPS+na5bRq13e20dfnB993yf9849OsF6IpzEG9EkPoklseMs+VmTa5z8zs31SDwTNWJIbAmosOXaGr/7qNXcSpSJGQGNzHgP67XmEvFBKARuROG9JFHzF2JA4I8ZsN4qJWk2Fw8hXfrnMoF/Rj43Ew98WHAnytzzWD5iescAU+55fOvVSxfcbjfS6TQymQwkSbrY3OfzMa3f71cLUT3sCBcxvCBkDQ/V6/Xgcrl+1RYKBSwWCxSLRbUAX8ybr86tUABerVYLZrP5rDabzaLb7SKXy4lszFeC7W+IBBiPx5hMJlAUBaVSCXq9/kQbj8fRbreRTCZFZuGd0A0EA7DGqVQK6/Uaq9UKsVjsRBuJRFCv1xGNRkX3gm55TQCTyYRKpYJ9jUYjNnQ/tYFAAPl8HsFgUCAA89btRAN0Oh322S0WCwuzL1mWYbPZjlqv14tEIqH6Wji7qwMYDAZ25vF40O/32Xmj0YDRaGTndrsdoVAIDodDOMBSQwBGOBzGfD7HZrP5rr5qQTOEoihPi0UNouJABItG05pgE7EjJu26YDYKhvXeBMtX7GlgsRmX7PYoO+OuM98nwtiDWx+H+3N+0DQNGGMwDOPnTE3T5B7B51UAgiCgbVscx4F935EkCWhEiqJAkiTuJXxcBUAlyzKGYQC9dV3h+/4zlPw4J6ITAFSu62JZFtAjMKqqgtO6vXFQ8TkAqiiKQEu5bRvquoYoitxUzCVGVVUhTdNfP87zHPM8Y5omhGHILUa3yTF1h7o1jiO6roNt21xyfKshoflTt/q+R5ZlxA9chuRWS2ZZFoqiQFmWCIKAzvXUkt1uSh3HQRzHZEygaRqXKb3VlhMrkkZ4ngdd12l5uWz5rcGEWi/L8pckSR+CILz+STRjjL0zxl7+ZTi9Gs/rZ+L5N8AJA23K4ax1AAAAAElFTkSuQmCC'
+      },
+      {
+        name: 'TailwindCSS',
+        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC8UlEQVR4Ae2XNZTbQBCG5TBzUl4VZj6+cH8pw0xNqHN10L8w9MVVgSoce+2kCUMVxjbUJSLTb/uXNH4rHYRJ731vRyt5Z3ZIa+OPu/5fNUkrBNMbf5BSVaEwBnqDPhLOxaRh33wtVJ91xQnIJMwrmiHqKw2pSZmacsojQTNoAydJK1jJZwboRWiE/bWxpvKEGatRJQPi4CPIgxxHKX8C7Xh3YM01h97wjeDG7Iq1I2Ju+i80Xc4a1crsA/k0lWSBRVxBhs/y4D6oAsIIjRjo1dXuvR8f5MIZjgT3uiccym/ABP6+L4gJxX2qy5scFmpAbdKUyqu5YAfjvBhsAOkwI4jL8S2Y5OfF2bwhDBkH2iI9IJLoKFgt58Qi8QgjpLfeg/XIiyELrlvYnNUP903gBdjfVQgGgRmUg3qnzPk9gUItRFniGfIQvOT9zWJiB25ns6lN2sDfJWE4EloS9aW8SyiVCZmj7IRUy3QQ0uW4y8akazSAOpRNvXIMsXO63yS+J1aAN1KRRMw9BnO8JJfKe8kOVlteeEQJBVnRA7IjKq1ahoCt4Dxd/YG85NwmMKgahlNfkHClslClmG+KWoCLD/GVKptG2KIFl+egJNgAveSFVnZJaf0cuqcrF76hu8vuLxqRdrUQzscuF4Dqq7axEGghJJ4wnYkhFTmivLKUXWHQLq3JgOoUvUKPBNBT9IRsu8UXb3LRlyyV93oZAb3c9nRRojPAIMqRH539bApNoF8t3Mk4rxeGZLRwBHNx4X7ZrFaziXEu2oA2MM5f5G5eLjKJ7ZT1HWlEmu15Mdt1B+ervYRFf4k0YBjLopwgCa3JTBD17VCxbgQR9weDaokOgVb/AlkhVfzE5mVCCizi5cvp4iccn/IgNMqMMEAqv2pyzqw0IvGlOA4E7SHVIuWPIA4vYtfM/q86H+pGyCPWSMa5FZwkbaCZz/RzYcr8ynNhIuxcaPO+e4dSHGy/038BRbo6lquvOJZ/TWg4avxx1/+rAHVbhJLs9OHAAAAAAElFTkSuQmCC'
+      },
+      {
+        name: 'shadcn',
+        icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAZ0lEQVR4Ae3MMREAIQxEUepYQAZGUuElmlLEAEoQgQGay5yAa45tmP31n1cYuzwRiQgzQ+ljjL23qgL13vt/jTr11pq754PS11pzztyAeq31pE49iwignpmZqqL0j9wdqGfyVhi7rAdZJpDQclU3QAAAAABJRU5ErkJggg=='
+      }
+    ],
+    image: 'https://avzx.vercel.app/og.webp',
+    demo: 'https://avzx.vercel.app',
+    repo: 'https://github.com/JJozef/avzx'
   },
   {
     title: 'SpaceX Launchs',
