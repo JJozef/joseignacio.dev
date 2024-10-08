@@ -53,7 +53,7 @@ export default function ProjectCard({
                     <Tooltip key={index}>
                       <TooltipTrigger asChild>
                         <Button
-                          className='size-8'
+                          className='size-8 p-1'
                           variant='outline'
                           size='icon'
                         >
