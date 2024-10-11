@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils'
 import { Inter as FontSans } from 'next/font/google'
 import { ThemeProvider } from '@/provider/theme-provider'
 import { TooltipProvider } from '@/components/ui/tooltip'
+import { ViewTransitions } from 'next-view-transitions'
 import Header from '@/components/header'
 
 const fontSans = FontSans({
@@ -67,28 +68,30 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang='es-CL' suppressHydrationWarning>
-      <head />
-      <body
-        className={cn(
-          'font-sans antialiased selection:bg-primary selection:text-secondary [&_:focus-visible]:outline-none',
-          fontSans.variable
-        )}
-      >
-        <ThemeProvider
-          attribute='class'
-          defaultTheme='system'
-          enableSystem
-          disableTransitionOnChange
+    <ViewTransitions>
+      <html lang='es-CL' suppressHydrationWarning>
+        <head />
+        <body
+          className={cn(
+            'font-sans antialiased selection:bg-primary selection:text-secondary [&_:focus-visible]:outline-none',
+            fontSans.variable
+          )}
         >
-          <TooltipProvider delayDuration={25} disableHoverableContent>
-            <Header />
-            <main className='relative min-w-0 pt-[calc(72px_+_1.5rem_-_0.5rem)] pb-6 px-4 antialiased max-w-3xl mx-auto'>
-              {children}
-            </main>
-          </TooltipProvider>
-        </ThemeProvider>
-      </body>
-    </html>
+          <ThemeProvider
+            attribute='class'
+            defaultTheme='system'
+            enableSystem
+            disableTransitionOnChange
+          >
+            <TooltipProvider delayDuration={25} disableHoverableContent>
+              <Header />
+              <main className='relative min-w-0 pt-[calc(72px_+_1.5rem_-_0.5rem)] pb-6 px-4 antialiased max-w-3xl mx-auto'>
+                {children}
+              </main>
+            </TooltipProvider>
+          </ThemeProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   )
 }

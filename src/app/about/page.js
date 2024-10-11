@@ -29,12 +29,14 @@ export default function AboutPage() {
         <div className=' grid w-full gap-4 grid-cols-1 md:grid-cols-[2.5fr,1fr] items-center place-items-center'>
           <div className='flex flex-col gap-3'>
             <h3 className='text-2xl font-semibold text-center md:text-left mb-1'>
-              Quién soy
+              Jose Ignacio
             </h3>
             <p className='text-center text-pretty md:text-left animated-gray-gradient'>
               Desarrollador <b className='font-semibold'>Frontend</b> con
-              conocimientos en <b className='font-semibold'>Backend</b>, con
-              <span className='font-semibold text-green-600 dark:text-green-400'> +1 año </span>
+              conocimientos en <b className='font-semibold'>Backend</b>, con{' '}
+              <span className='font-semibold text-green-600 dark:text-green-400'>
+                +1 año{' '}
+              </span>
               de experiencia en el desarrollo de aplicaciones web.
             </p>
             <p className='text-center text-pretty md:text-left animated-gray-gradient'>

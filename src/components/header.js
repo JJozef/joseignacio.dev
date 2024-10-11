@@ -1,20 +1,21 @@
 'use client'
 
-import { useRouter, useSelectedLayoutSegment } from 'next/navigation'
-import { LayoutGroup } from 'framer-motion'
 import { MENU_ITEMS } from '@/const/data'
-import { GlowButton } from './buttons/glow-button'
-import { SelectTheme } from './select-theme'
-import { Dialog, DialogClose, DialogContent, DialogTrigger } from './ui/dialog'
-import { MenuIcon } from 'lucide-react'
+import { useSelectedLayoutSegment } from 'next/navigation'
 import { Button } from '@/components/ui/button'
+import { MenuIcon } from 'lucide-react'
+import { GlowButton } from './buttons/glow-button'
+import { LayoutGroup } from 'framer-motion'
+import { SelectTheme } from './select-theme'
+import { useTransitionRouter } from 'next-view-transitions'
+import { Dialog, DialogClose, DialogContent, DialogTrigger } from './ui/dialog'
 import HeaderLink from '@/components/links/header-link'
 import Link from 'next/link'
 import Image from 'next/image'
 
 export default function Header() {
   const segment = useSelectedLayoutSegment()
-  const router = useRouter()
+  const router = useTransitionRouter()
 
   return (
     <LayoutGroup>

@@ -1,7 +1,8 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
 import { NoisyCard } from '@/root/src/components/cards/noisy-card'
+import { useTransitionRouter } from 'next-view-transitions'
+import { Button } from '@/components/ui/button'
 import {
   ArrowRightIcon,
   GithubIcon,
@@ -18,6 +19,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function SocialCard() {
+  const router = useTransitionRouter()
+
   return (
     <NoisyCard className='flex flex-col justify-center items-center gap-6'>
       <div className='flex justify-center rounded-full from-zinc-200 to-zinc-400 dark:from-zinc-500/80 dark:to-zinc-800/80 bg-gradient-to-b w-max p-1'>
@@ -63,7 +66,9 @@ export default function SocialCard() {
               </Button>
             </TooltipTrigger>
             <TooltipContent className='py-0' sideOffset={10}>
-              <p>X <em>(Twitter)</em></p>
+              <p>
+                X <em>(Twitter)</em>
+              </p>
             </TooltipContent>
           </Tooltip>
           <Tooltip>
@@ -81,11 +86,14 @@ export default function SocialCard() {
             </TooltipContent>
           </Tooltip>
         </div>
-        <Button asChild>
-          <Link className='group' href='/about'>
-            Mas sobre mi
-            <ArrowRightIcon className='ml-1 transition duration-100 group-hover:translate-x-1 sm:group-hover:translate-x-2' />
-          </Link>
+        <Button
+          onClick={(e) => {
+            e.preventDefault()
+            router.push('/about')
+          }}
+        >
+          Mas sobre mi
+          <ArrowRightIcon className='ml-1 transition duration-100 group-hover:translate-x-1 sm:group-hover:translate-x-2' />
         </Button>
       </div>
     </NoisyCard>
