@@ -17,7 +17,7 @@ export default function CardMoreInfo() {
             <span className='text-green-600 dark:text-green-400 font-bold text-base inline-block'>
               +1
             </span>{' '}
-            año de experiencia en desarrollo <strong>Frontend</strong>, ademas
+            año de experiencia en desarrollo <strong>Frontend</strong>, además
             de conocimientos en <strong>Backend</strong>.
           </p>
         </div>
@@ -36,7 +36,7 @@ export default function CardMoreInfo() {
       </div>
       <div className='flex flex-col gap-2'>
         <h2 className='text-pretty text-base font-bold'>
-          Tecnologias favoritas
+          Tecnologías favoritas
         </h2>
         <div className='flex items-center gap-3'>
           <Tooltip>

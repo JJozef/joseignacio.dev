@@ -92,7 +92,7 @@ export default function SocialCard() {
             router.push('/about')
           }}
         >
-          Mas sobre mi
+          Más sobre mi
           <ArrowRightIcon className='ml-1 transition duration-100 group-hover:translate-x-1 sm:group-hover:translate-x-2' />
         </Button>
       </div>
